@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vet Board AI - Patient Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            background-color: #A3C4EB;
+            margin: 0;
+            padding-top: 60px; /* Ensure content starts below the fixed header */
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        h1 {
+            color: navy;
+            margin: 0;
+        }
+        nav a {
+            color: navy;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .portal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .portal-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            min-height: 200px;
+            margin: 20px 0;
+            padding: 20px;
+            text-align: left;
+        }
+        .portal-section h2 {
+            color: navy;
+            margin-top: 0;
+        }
+        .patient-name {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .patient-details {
+            display: none;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .details-section {
+            margin-bottom: 10px;
+        }
+        .details-title {
+            font-weight: bold;
+            color: navy;
+        }
+        .details-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .details-list li {
+            margin-bottom: 5px;
+        }
+        @media (max-width: 768px) {
+            .portal-section {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vet Board AI - Patient Portal</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="calendar.html">Calendar</a> |
+            <a href="messages.html">Messages</a> |
+            <a href="docai.html">DOC AI</a> |
+            <a href="hospital-comm.html">Hospital Communication</a> |
+            <a href="patient-portal.html">Patient Portal</a>
+        </nav>
+    </header>
+    <div class="portal-content">
+        <div class="portal-section" id="pet-accounts">
+            <h2>Patient Accounts</h2>
+
+            <!-- Max - Pitbull -->
+            <div>
+                <div class="patient-name" onclick="toggleDetails('max-details')">Max - Pitbull</div>
+                <div id="max-details" class="patient-details">
+                    <div class="details-section">
+                        <div class="details-title">Medical Information:</div>
+                        <ul class="details-list">
+                            <li>Age: 5 years</li>
+                            <li>Weight: 60 lbs</li>
+                            <li>Last Visit: 3 months ago</li>
+                            <li>Conditions: Healthy, up-to-date on vaccinations</li>
+                            <li>Medications: None</li>
+                        </ul>
+                    </div>
+                    <div class="details-section">
+                        <div class="details-title">Owner Information:</div>
+                        <ul class="details-list">
+                            <li>Owner: John Doe</li>
+                            <li>Phone: (555) 123-4567</li>
+                        </ul>
+                    </div>
+                    <div class="details-section">
+                        <div class="details-title">Financials:</div>
+                        <ul class="details-list">
+                            <li>Balance Due: $200.00</li>
+                            <li>Last Payment: 2 months ago</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional patients -->
+            <div>
+                <div class="patient-name" onclick="toggleDetails('luna-details')">Luna - Siamese Cat</div>
+                <div id="luna-details" class="patient-details">
+                    <div class="details-section">
+                        <div class="details-title">Medical Information:</div>
+                        <ul class="details-list">
+                            <li>Age: 3 years</li>
+                            <li>Weight: 15 lbs</li>
+                            <li>Last Visit: 6 months ago</li>
+                            <li>Conditions: Mild allergies</li>
+                            <li>Medications: Allergy medication</li>
+                        </ul>
+                    </div>
+                    <div class="details-section">
+                        <div class="details-title">Owner Information:</div>
+                        <ul class="details-list">
+                            <li>Owner: Alice Smith</li>
+                            <li>Phone: (555) 234-5678</li>
+                        </ul>
+                    </div>
+                    <div class="details-section">
+                        <div class="details-title">Financials:</div>
+                        <ul class="details-list">
+                            <li>Balance Due: $100.00</li>
+                            <li>Last Payment: 1 month ago</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More patients can be added here -->
+
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+            } else {
+                details.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

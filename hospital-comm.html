@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vet Board AI - Hospital Communication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            background-color: #A3C4EB;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        h1 {
+            color: navy;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: navy;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .message-board {
+            margin-top: 140px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .message-card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 80%;
+            text-align: left;
+        }
+        .message-header {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .message-body {
+            font-size: 1em;
+            color: #666666;
+        }
+        .message-footer {
+            text-align: right;
+            margin-top: 20px;
+            color: #333333;
+        }
+        @media (max-width: 768px) {
+            .message-card {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hospital Communication</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="calendar.html">Calendar</a> |
+            <a href="messages.html">Messages</a> |
+            <a href="docai.html">DOC AI</a> |
+            <a href="hospital-comm.html">Hospital Communication</a>
+        </nav>
+    </header>
+    <div class="message-board">
+        <div class="message-card">
+            <div class="message-header">
+                <span>Staff Meeting</span>
+                <span>Today 10:00 AM</span>
+            </div>
+            <div class="message-body">
+                <p>Reminder that we have a staff meeting in the main conference room. Please be on time.</p>
+            </div>
+            <div class="message-footer">
+                <span>Posted by Admin</span>
+            </div>
+        </div>
+        <div class="message-card">
+            <div class="message-header">
+                <span>Updated Vaccination Policy</span>
+                <span>Yesterday 3:00 PM</span>
+            </div>
+            <div class="message-body">
+                <p>Please review the updated vaccination policy. All staff must comply with the new guidelines by next month.</p>
+            </div>
+            <div class="message-footer">
+                <span>Posted by HR Department</span>
+            </div>
+        </div>
+        <div class="message-card">
+            <div class="message-header">
+                <span>Pet Adoption Event</span>
+                <span>Tomorrow 9:00 AM</span>
+            </div>
+            <div class="message-body">
+                <p>Reminder about the pet adoption event happening tomorrow. Volunteers are still needed!</p>
+            </div>
+            <div class="message-footer">
+                <span>Posted by Outreach Team</span>
+            </div>
+        </div>
+        <!-- Additional messages can be added here -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vet Board AI - DOC AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            background-color: #A3C4EB;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: navy;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: navy;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .doc-ai-container {
+            margin-top: 100px;
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .doc-ai-message {
+            margin: 10px 0;
+            color: #333;
+        }
+        .ai-prefix {
+            font-weight: bold;
+            color: navy;
+            margin-right: 5px;
+        }
+        .user-prefix {
+            font-weight: bold;
+            color: green;
+            margin-right: 5px;
+        }
+        .patient-history {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DOC AI</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="calendar.html">Calendar</a> |
+            <a href="messages.html">Messages</a> |
+            <a href="docai.html">DOC AI</a> |
+            <a href="hospital-comm.html">Hospital Communication</a>
+        </nav>
+    </header>
+    <div class="doc-ai-container">
+        <div class="doc-ai-message">
+            <span class="ai-prefix">DOC AI:</span>
+            <span>Hello Dr. Doe! What can I do for you today?</span>
+        </div>
+        <div class="doc-ai-message">
+            <span class="user-prefix">Dr. Doe:</span>
+            <span>Can you show me the patient history for Max, the Pitbull?</span>
+        </div>
+        <div class="doc-ai-message">
+            <span class="ai-prefix">DOC AI:</span>
+            <span>Of course! Here's the patient history for Max:</span>
+        </div>
+        <div class="doc-ai-message patient-history">
+            <ul>
+                <li>Name: Max</li>
+                <li>Species: Pitbull</li>
+                <li>Age: 5 years</li>
+                <li>Weight: 60 lbs</li>
+                <li>Last Visit: 3 months ago</li>
+                <li>Conditions: Healthy, up-to-date on vaccinations</li>
+                <li>Notes: Friendly, responds well to treats, slight anxiety during thunderstorms</li>
+                <li>Medications: None</li>
+            </ul>
+        </div>
+        <div class="doc-ai-message">
+            <span class="user-prefix">Dr. Doe:</span>
+            <span>Do you have any tips for a feline neuter surgery?</span>
+        </div>
+        <div class="doc-ai-message">
+            <span class="ai-prefix">DOC AI:</span>
+            <span>Here are some key tips for a feline neuter surgery:</span>
+        </div>
+        <div class="doc-ai-message patient-history">
+            <ul>
+                <li>Ensure the cat is healthy and fasted before surgery.</li>
+                <li>Use aseptic techniques to prevent infections.</li>
+                <li>Administer appropriate anesthesia and analgesia.</li>
+                <li>Make a small incision in the scrotal sac.</li>
+                <li>Remove the testicles carefully to avoid excessive bleeding.</li>
+                <li>Close the incision with absorbable sutures, if needed.</li>
+                <li>Monitor the cat post-operatively for any complications.</li>
+                <li>Provide pain management and care instructions to the owner.</li>
+            </ul>
+        </div>
+        <!-- More conversation content can be added here -->
+    </div>
+</body>
+</html>

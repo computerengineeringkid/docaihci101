@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vet Board AI - Calendar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #A3C4EB;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: navy;
+            margin: 0;
+        }
+        nav {
+            margin-bottom: 30px; /* More separation from the nav */
+        }
+        nav a {
+            color: navy;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 60%; /* Adjusted width to not be full page */
+            margin: 30px auto 0; /* More separation from the title and nav */
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left; /* Align text to the left */
+            vertical-align: top; /* Align text to the top */
+            width: 14.28%; /* Evenly split the width of the table */
+        }
+        th {
+            background-color: #f3f3f3;
+            font-weight: bold;
+            font-size: 0.85em; /* Smaller font size for day headers */
+            padding: 5px; /* Smaller padding for headers */
+            text-shadow: 1px 1px #fff; /* Text shadow for beveled look */
+        }
+        td {
+            height: 100px; /* Larger box size */
+            background-color: #e8eef1; /* Light blue background for contrast */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow for beveled look */
+        }
+        .date {
+            padding-top: 5px; /* Slight padding from the top */
+            padding-left: 5px; /* Slight padding from the left */
+            font-size: 0.9em; /* Adjust font size for date numbers */
+        }
+        .calendar-event {
+            background-color: #d0e8f2;
+            border-radius: 4px;
+            margin-top: 5px;
+            padding: 2px 5px;
+            font-size: 0.75em;
+            word-wrap: break-word; /* Ensure text wraps within the box */
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calendar</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="calendar.html">Calendar</a> |
+            <a href="messages.html">Messages</a> |
+            <a href="docai.html">DOC AI</a> |
+            <a href="hospital-comm.html">Hospital Communication</a>
+        </nav>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>SUN</th>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+                <th>SAT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="date">1</td>
+                <td class="date">2</td>
+                <td class="date">3</td>
+                <td class="date">4</td>
+                <td class="date">5
+                    <div class="calendar-event">Staff Meeting 10 AM</div>
+                </td>
+                <td class="date">6</td>
+                <td class="date">7</td>
+            </tr>
+            <tr>
+                <td class="date">8</td>
+                <td class="date">9</td>
+                <td class="date">10
+                    <div class="calendar-event">Vaccine Clinic</div>
+                </td>
+                <td class="date">11</td>
+                <td class="date">12</td>
+                <td class="date">13</td>
+                <td class="date">14</td>
+            </tr>
+            <tr>
+                <td class="date">15</td>
+                <td class="date">16</td>
+                <td class="date">17</td>
+                <td class="date">18</td>
+                <td class="date">19</td>
+                <td class="date">20</td>
+                <td class="date">21</td>
+            </tr>
+            <tr>
+                <td class="date">22</td>
+                <td class="date">23</td>
+                <td class="date">24</td>
+                <td class="date">25</td>
+                <td class="date">26</td>
+                <td class="date">27</td>
+                <td class="date">28</td>
+            </tr>
+            <tr>
+                <td class="date">29</td>
+                <td class="date">30</td>
+                <td class="date">31</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
