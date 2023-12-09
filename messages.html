@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vet Board AI - Messages</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -12,12 +14,16 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            height: 100vh; /* Full viewport height */
+            height: 100vh;
         }
         header {
             background-color: #ffffff;
             padding: 20px 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         h1 {
             color: navy;
@@ -31,48 +37,80 @@
             text-decoration: underline;
         }
         .message-container {
-            flex-grow: 1; /* Allows the container to expand */
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Vertically centers the content */
+            justify-content: center;
             gap: 20px;
-            padding: 20px;
+            padding-top: 60px; /* Adjusted padding to push content below the header */
+            padding-bottom: 20px; /* Padding at the bottom for spacing */
         }
         .message-card {
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
             width: 80%;
             max-width: 600px;
             padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .message-img {
+            flex-shrink: 0; /* Prevent image from shrinking */
+            width: 50px; /* Width of image */
+            height: 50px; /* Height of image */
+            background-size: cover;
+            background-position: center;
+            margin-right: 15px;
+            border-radius: 4px; /* Beveled edges */
+        }
+        .sharon-img {
+            background-image: url('lovingpetowner.png');
+        }
+        .doe-img {
+            background-image: url('docdoe.png');
+            object-fit: cover; /* Ensure image covers the area */
+        }
+        .message-content {
             text-align: left;
+            flex-grow: 1; /* Allows the content to fill the space */
         }
         .message-header {
-            font-size: 1.2em;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
+            color: navy;
         }
-        .message-body {
-            font-size: 1em;
-            margin-bottom: 20px;
-            color: #666;
+        .message-text {
+            color: #333;
+            margin: 5px 0;
         }
         .message-footer {
-            text-align: right;
+            font-size: 0.85em;
+            color: #666;
         }
-        .reply-button {
+        .reply-area {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .reply-area input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .reply-area input[type="submit"] {
+            padding: 10px 20px;
             background-color: navy;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+            border: none;
             border-radius: 5px;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease;
+            cursor: pointer;
         }
-        .reply-button:hover {
+        .reply-area input[type="submit"]:hover {
             background-color: #0056b3;
         }
     </style>
@@ -89,17 +127,35 @@
         </nav>
     </header>
     <div class="message-container">
-        <!-- Example message card -->
+        <!-- Example of a client message -->
         <div class="message-card">
-            <div class="message-header">Subject: Appointment Request</div>
-            <div class="message-body">
-                Hi, I would like to schedule an appointment for my dog, Fluffy...
-            </div>
-            <div class="message-footer">
-                <a href="reply.html" class="reply-button">Reply</a>
+            <div class="message-img sharon-img"></div>
+            <div class="message-content">
+                <div class="message-header">Sharon Banks</div>
+                <div class="message-text">
+                    Hi, I'm concerned about my cat's recent behavior...
+                </div>
+                <div class="message-footer">Received: Today, 10:32 AM</div>
             </div>
         </div>
-        <!-- More message cards can be added here -->
+        
+        <!-- Example of a vet reply -->
+        <div class="message-card">
+            <div class="message-img doe-img"></div>
+            <div class="message-content">
+                <div class="message-header">Dr. Doe</div>
+                <div class="message-text">
+                    Hello Sharon, let's schedule an appointment to discuss this further. Do you have availability this week?
+                </div>
+                <div class="message-footer">Sent: Today, 11:15 AM</div>
+            </div>
+        </div>
+
+        <!-- Reply area -->
+        <div class="reply-area">
+            <input type="text" placeholder="Type your reply...">
+            <input type="submit" value="Send">
+        </div>
     </div>
 </body>
 </html>
